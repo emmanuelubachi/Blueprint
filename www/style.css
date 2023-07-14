@@ -1,0 +1,13 @@
+.blue-body {
+  background-color: rgba(0, 128, 255, 0.5);
+}
+
+.bold-output {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 100px;
+  border: 23px;
+  color: red;
+}
