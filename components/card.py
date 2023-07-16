@@ -57,7 +57,7 @@ def card(title: str, description: str):
     return card
 
 
-def card_link(title, description):
+def card_link(title: str, description: str):
     TITLE = str(title)
     DESCRIPTION = str(description)
     card_link = ui.tags.a(
@@ -116,50 +116,6 @@ def help_card():
         class_="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow",
     )
     return help_card
-
-
-def image_card():
-    image_card = ui.tags.div(
-        ui.tags.a(
-            ui.tags.img(
-                class_="rounded-t-lg",
-                src="/docs/images/blog/image-1.jpg",
-                alt="",
-            ),
-            href="#",
-        ),
-        ui.tags.div(
-            ui.tags.a(
-                ui.tags.h5(
-                    "Noteworthy technology acquisitions 2021",
-                    class_="mb-2 text-2xl font-bold tracking-tight text-gray-900 ",
-                ),
-                href="#",
-            ),
-            ui.tags.p(
-                "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-                class_="mb-3 font-normal text-gray-700 ",
-            ),
-            ui.tags.a(
-                "Read more",
-                ui.tags.svg(
-                    HTML(
-                        '<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>'
-                    ),
-                    class_="w-3.5 h-3.5 ml-2",
-                    aria_hidden="true",
-                    xmlns="http://www.w3.org/2000/svg",
-                    fill="none",
-                    viewBox="0 0 14 10",
-                ),
-                href="#",
-                class_="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300",
-            ),
-            class_="p-5",
-        ),
-        class_="max-w-sm bg-white border border-gray-200 rounded-lg shadow ",
-    )
-    return image_card
 
 
 def flex_card():
