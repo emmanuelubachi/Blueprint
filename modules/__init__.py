@@ -1,1 +1,1 @@
-from .layout import page_layout
+from .layout import layout
