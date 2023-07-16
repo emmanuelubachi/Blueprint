@@ -11,8 +11,8 @@ tit3 = "3 Noteworthy technology acquisitions 2021"
 desc3 = "3 Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
 
 
-def page_layout():
-    page_layout = ui.tags.main(
+def layout() -> ui.tags.main:
+    return ui.tags.main(
         ui.h1("Hello", class_="text-3xl font-bold underline"),
         ui.input_slider("num", "Number:", min=10, max=100, value=30),
         ui.div(
@@ -28,8 +28,8 @@ def page_layout():
         ui.row(
             ui.column(4, flex_card()),
             ui.column(4, help_card()),
-            ui.column(4, image_card()),
+            ui.column(4, flex_card()),
             align="center",
         ),
+        HTML(bar_base()),
     )
-    return page_layout
