@@ -2,10 +2,10 @@ from shiny import App, Inputs, Outputs, Session, render, ui
 
 from pathlib import Path
 
-from modules import page_layout
+from modules import layout
 
 page_dependencies = ui.tags.head(
-    ui.tags.link(rel="stylesheet", type="text/css", href="style.css"),
+    ui.tags.link(rel="stylesheet", type="text/css", href="style/style.css"),
     ui.tags.link(
         rel="stylesheet",
         type="text/css",
@@ -18,13 +18,14 @@ body_scripts = ui.tags.head(
     ui.tags.script(
         src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
     ),
+    ui.tags.script(src="js/index.js"),
 )
 
 app_ui = ui.page_fluid(
     ui.head_content(page_dependencies),
-    page_layout(),
+    layout(),
     body_scripts,
-    title="PyShiny",
+    title="Shiny for Python Template",
     lang="en",
 )
 
